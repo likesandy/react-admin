@@ -70,7 +70,12 @@ export default [
             {
               icon: 'UploadOutlined',
               path: '/commonly/upload',
-              title: 'upload',
+              title: '上传',
+            },
+            {
+              icon: 'SendOutlined',
+              path: '/commonly/guide',
+              title: '引导',
             },
           ],
         },

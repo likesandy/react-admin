@@ -32,8 +32,11 @@ export const HeaderWrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-around;
-    .username {
-      margin-left: 15px;
+    .icon-style {
+      margin-right: 22px;
+      font-size: 19px;
+      line-height: 19px;
+      cursor: pointer;
     }
   }
 `

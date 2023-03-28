@@ -1,13 +1,12 @@
 import { useAppDispatch, useAppSelector } from '@/hooks/useStote'
-import { setCollapsedAction } from '@/store/menu/reducer'
 import { selectCollapsed } from '@/store/menu/selectState'
-import { MenuFoldOutlined, MenuUnfoldOutlined } from '@ant-design/icons'
 import { Layout } from 'antd'
 import type { FC, ReactNode } from 'react'
-import React, { memo } from 'react'
+import { memo } from 'react'
 import AvatarIcon from './components/AvatarIcon'
 import BreadcrumbNav from './components/BreadcrumbNav'
 import CollapseIcon from './components/CollapseIcon'
+import Guide from './components/Guide'
 import HeaderSearch from './components/Search'
 import { HeaderWrapper } from './style'
 
@@ -27,6 +26,7 @@ const LayoutHeader: FC<IProps> = memo((props) => {
           <BreadcrumbNav />
         </div>
         <div className="header-right">
+          <Guide />
           <HeaderSearch />
           <AvatarIcon />
           <span className="username">ilun</span>

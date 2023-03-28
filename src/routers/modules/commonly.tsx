@@ -1,6 +1,5 @@
 import { LayoutIndex } from '@/routers/constant'
 import { RouteObject } from '@/routers/interface'
-import Home from '@/views/home/index'
 import React from 'react'
 import lazyLoad from '../utils/lazyLoad'
 

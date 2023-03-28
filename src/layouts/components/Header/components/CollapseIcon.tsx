@@ -20,7 +20,7 @@ const CollapseIcon: FC<IProps> = memo(() => {
         onClick={() => {
           dispatch(setCollapsedAction(!isCollapsed))
         }}>
-        {isCollapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
+        {isCollapsed ? <MenuUnfoldOutlined id="isCollapse" /> : <MenuFoldOutlined id="isCollapse" />}
       </div>
     </>
   )

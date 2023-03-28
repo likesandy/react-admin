@@ -8,7 +8,7 @@ import ReactDOM from 'react-dom'
 
 // react 17 创建，控制台会报错，暂时不影响使用（菜单折叠时不会出现闪烁）
 //* github.com/ant-design/ant-design/issues/36174
-https: ReactDOM.render(
+ReactDOM.render(
   <Provider store={store}>
     <PersistGate persistor={persistor}>
       <App />

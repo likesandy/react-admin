@@ -4,6 +4,7 @@ specifiers:
   '@ant-design/icons': ^4.8.0
   '@reduxjs/toolkit': ^1.9.1
   '@toast-ui/editor': ^3.2.1
+  '@types/lodash': ^4.14.192
   '@types/node': ^18.11.11
   '@types/react': ^18.0.24
   '@types/react-dom': ^18.0.8
@@ -11,6 +12,7 @@ specifiers:
   '@vitejs/plugin-react': ^2.2.0
   antd: ^5.0.6
   axios: ^1.2.1
+  lodash: ^4.17.21
   mockjs: ^1.1.0
   normalize.css: ^8.0.1
   nprogress: ^0.2.0
@@ -30,8 +32,10 @@ dependencies:
   '@ant-design/icons': 4.8.0_biqbaboplfbrettd7655fr4n2y
   '@reduxjs/toolkit': 1.9.1_k4ae6lp43ej6mezo3ztvx6pykq
   '@toast-ui/editor': 3.2.1
+  '@types/lodash': 4.14.192
   antd: 5.1.2_biqbaboplfbrettd7655fr4n2y
   axios: 1.2.1
+  lodash: 4.17.21
   mockjs: 1.1.0
   normalize.css: 8.0.1
   nprogress: 0.2.0
@@ -597,6 +601,10 @@ packages:
     dependencies:
       '@types/react': 18.0.26
       hoist-non-react-statics: 3.3.2
+
+  /@types/lodash/4.14.192:
+    resolution: {integrity: sha512-km+Vyn3BYm5ytMO13k9KTp27O75rbQ0NFw+U//g+PX7VZyjCioXaRFisqSIJRECljcTv73G3i6BpglNGHgUQ5A==}
+    dev: false
 
   /@types/mockjs/1.0.7:
     resolution: {integrity: sha512-OCxXz6hEaJOVpRwuJMiVY5a6LtJcih+br9gwB/Q8ooOBikvk5FpBQ31OlNimXo3EqKha1Z7PFBni+q9m+8NCWg==}

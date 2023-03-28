@@ -6,7 +6,7 @@ const HeaderSearch: FC = () => {
   const [isShow, setIsShow] = useState(false)
   return (
     <>
-      <SearchOutlined style={{ fontSize: '20px' }} />
+      {/* <SearchOutlined style={{ fontSize: '20px' }} />
       <Select
         showSearch
         disabled
@@ -14,7 +14,7 @@ const HeaderSearch: FC = () => {
         optionFilterProp="children"
         options={[]}
         className={isShow ? 'show' : ''}
-      />
+      /> */}
     </>
   )
 }
