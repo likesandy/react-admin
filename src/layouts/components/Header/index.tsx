@@ -4,7 +4,7 @@ import { memo } from 'react'
 import AvatarIcon from './components/AvatarIcon'
 import BreadcrumbNav from './components/BreadcrumbNav'
 import CollapseIcon from './components/CollapseIcon'
-import Guide from './components/Guide'
+import Fullscreen from './components/Fullscreen'
 import HeaderSearch from './components/Search'
 import Theme from './components/Theme'
 import { HeaderWrapper } from './style'
@@ -23,11 +23,11 @@ const LayoutHeader: FC<IProps> = memo((props) => {
           <BreadcrumbNav />
         </div>
         <div className="header-right">
-          <Guide />
           <HeaderSearch />
           <Theme />
-          <AvatarIcon />
+          <Fullscreen />
           <span className="username">ilun</span>
+          <AvatarIcon />
         </div>
       </Header>
     </HeaderWrapper>

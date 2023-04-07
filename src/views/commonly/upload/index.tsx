@@ -9,7 +9,7 @@ interface IProps {
 
 const UploadFile: FC<IProps> = memo(() => {
   return (
-    <UploadFileWrapper className="h-auto  card flex justify-center">
+    <UploadFileWrapper className="card content-box">
       <span className="text-2xl font-bold">多图片上传组件 🍓🍇🍈🍉</span>
       <div className="flex flex-wrap content-around w-90 my-[10px]">
         <UploadImgs borderRadius="100px" />

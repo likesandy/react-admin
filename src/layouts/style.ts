@@ -14,7 +14,7 @@ export const LayoutsWrapper = styled.div`
     .ant-layout-content {
       box-sizing: border-box;
       flex: 1;
-      padding: 20px;
+      padding: 10px 12px;
       overflow-x: hidden;
     }
   }

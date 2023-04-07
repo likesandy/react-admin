@@ -19,16 +19,18 @@ const BreadcrumbNav: FC<IProps> = memo(() => {
   return (
     <>
       {themeConfig?.breadcrumb && (
-        <Breadcrumb>
-          <Breadcrumb.Item key="home" href={HOME_URL}>
-            首页
-          </Breadcrumb.Item>
-          {breadcrumbList?.map((item: string) => {
-            //* 这里使用null或者undefined
-            //* 使用""会显示/
-            return <Breadcrumb.Item key={item}>{item === '首页' ? null : item}</Breadcrumb.Item>
-          })}
-        </Breadcrumb>
+        <div id="breadcrumb">
+          <Breadcrumb>
+            <Breadcrumb.Item key="home" href={HOME_URL}>
+              首页
+            </Breadcrumb.Item>
+            {breadcrumbList?.map((item: string) => {
+              //* 这里使用null或者undefined
+              //* 使用""会显示/
+              return <Breadcrumb.Item key={item}>{item === '首页' ? null : item}</Breadcrumb.Item>
+            })}
+          </Breadcrumb>
+        </div>
       )}
     </>
   )

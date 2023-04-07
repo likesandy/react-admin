@@ -16,7 +16,7 @@ const Theme: FC<IProps> = memo(() => {
     setOpen(false)
   }
   const themeConfig = useAppSelector(selectThemeConfig)
-  const { collapsed, weakOrGray } = themeConfig
+  const { collapsed, weakOrGray, footer } = themeConfig
   const dispatch = useAppDispatch()
 
   const onChange = (checked: boolean, keyName: string) => {
@@ -30,80 +30,80 @@ const Theme: FC<IProps> = memo(() => {
 
   return (
     <>
-      <div>
-        <SkinOutlined
-          className="icon-style"
-          onClick={() => {
-            setOpen(true)
-          }}
-        />
-        <Drawer title="布局设置" placement="right" onClose={onClose} open={open} closable={false}>
-          {/* 全局主题 */}
-          <Divider className="divider">
-            <FireOutlined /> 全局主题
-          </Divider>
-          <div className="theme-item">
-            <span>暗黑模式</span>
-            <SwitchDark />
-          </div>
-          <div className="theme-item">
-            <span>灰色模式</span>
-            <Switch
-              checked={weakOrGray === 'gray'}
-              onChange={(e) => {
-                setWeakOrGray(e, 'gray')
-              }}
-            />
-          </div>
-          <div className="theme-item">
-            <span>色弱模式</span>
-            <Switch
-              checked={weakOrGray === 'weak'}
-              onChange={(e) => {
-                setWeakOrGray(e, 'weak')
-              }}
-            />
-          </div>
+      <SkinOutlined
+        className="icon-style"
+        id="theme"
+        onClick={() => {
+          setOpen(true)
+        }}
+      />
+      <Drawer title="布局设置" placement="right" onClose={onClose} open={open} closable={false}>
+        {/* 全局主题 */}
+        <Divider className="divider">
+          <FireOutlined /> 全局主题
+        </Divider>
+        <div className="theme-item">
+          <span>暗黑模式</span>
+          <SwitchDark />
+        </div>
+        <div className="theme-item">
+          <span>灰色模式</span>
+          <Switch
+            checked={weakOrGray === 'gray'}
+            onChange={(e) => {
+              setWeakOrGray(e, 'gray')
+            }}
+          />
+        </div>
+        <div className="theme-item">
+          <span>色弱模式</span>
+          <Switch
+            checked={weakOrGray === 'weak'}
+            onChange={(e) => {
+              setWeakOrGray(e, 'weak')
+            }}
+          />
+        </div>
 
-          {/* 界面设置 */}
-          <Divider className="divider">
-            <SettingOutlined /> 界面设置
-          </Divider>
-          <div className="theme-item">
-            <span>折叠菜单</span>
-            <Switch
-              checked={!collapsed}
-              onChange={(e) => {
-                onChange(e, 'collapsed')
-              }}
-            />
-          </div>
-          <div className="theme-item">
-            <span>面包屑导航</span>
-            <Switch
-              onChange={(e) => {
-                onChange(e, 'breadcrumb')
-              }}
-            />
-          </div>
-          <div className="theme-item">
-            <span>标签栏</span>
-            <Switch
-              onChange={(e) => {
-                onChange(e, 'tabs')
-              }}
-            />
-          </div>
-          <div className="theme-item">
-            <span>页脚</span>
-            <Switch
-              onChange={(e) => {
-                onChange(e, 'footer')
-              }}
-            />
-          </div>
-        </Drawer>
-      </div>
+        {/* 界面设置 */}
+        <Divider className="divider">
+          <SettingOutlined /> 界面设置
+        </Divider>
+        <div className="theme-item">
+          <span>折叠菜单</span>
+          <Switch
+            checked={!collapsed}
+            onChange={(e) => {
+              onChange(e, 'collapsed')
+            }}
+          />
+        </div>
+        <div className="theme-item">
+          <span>面包屑导航</span>
+          <Switch
+            onChange={(e) => {
+              onChange(e, 'breadcrumb')
+            }}
+          />
+        </div>
+        <div className="theme-item">
+          <span>标签栏</span>
+          <Switch
+            onChange={(e) => {
+              onChange(e, 'tabs')
+            }}
+          />
+        </div>
+        <div className="theme-item">
+          <span>页脚</span>
+          <Switch
+            checked={!footer}
+            onChange={(e) => {
+              onChange(e, 'footer')
+            }}
+          />
+        </div>
+      </Drawer>
     </>
   )
 })

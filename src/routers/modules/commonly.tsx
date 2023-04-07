@@ -12,6 +12,15 @@ const commonlyRouter: Array<RouteObject> = [
     },
     children: [
       {
+        path: '/commonly/guide',
+        element: lazyLoad(React.lazy(() => import('@/views/commonly/guide'))),
+        meta: {
+          requiresAuth: true,
+          title: 'guide',
+          key: 'guide',
+        },
+      },
+      {
         path: '/commonly/upload',
         element: lazyLoad(React.lazy(() => import('@/views/commonly/upload'))),
         meta: {

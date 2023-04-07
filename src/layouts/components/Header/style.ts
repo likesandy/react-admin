@@ -8,7 +8,7 @@ export const HeaderWrapper = styled.div`
     border-bottom: 1px solid #f6f6f6;
     background-color: #ffffff !important;
     height: 55px;
-    padding: 0 20px;
+    padding: 0 40px 0 20px;
   }
   .header-left {
     display: flex;
@@ -20,12 +20,15 @@ export const HeaderWrapper = styled.div`
       cursor: pointer;
       transition: color 0.3s;
     }
-    .ant-breadcrumb a:hover {
-      color: rgba(0, 0, 0, 0.85);
-      background-color: #ffffff;
-    }
-    .ant-breadcrumb li:last-child {
-      color: rgba(0, 0, 0, 0.85);
+    .ant-breadcrumb {
+      font-size: 15px;
+      & a:hover {
+        background-color: #ffffff;
+      }
+      & li:last-child {
+        color: #000000d8;
+        font-weight: 700;
+      }
     }
   }
   .header-right {
@@ -37,6 +40,10 @@ export const HeaderWrapper = styled.div`
       font-size: 19px;
       line-height: 19px;
       cursor: pointer;
+    }
+    .username {
+      margin-right: 15px;
+      font-size: 15px;
     }
   }
 `

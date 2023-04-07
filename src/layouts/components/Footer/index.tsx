@@ -12,7 +12,7 @@ const LayoutFooter: FC<IProps> = memo(() => {
   const themeConfig = useAppSelector(selectThemeConfig)
   return (
     <>
-      {themeConfig.footer && (
+      {!themeConfig.footer && (
         <LayoutFooterWrapper>
           <div>LayoutFooter</div>
         </LayoutFooterWrapper>

@@ -11,7 +11,7 @@ const initialState: IGlobalState = {
     weakOrGray: '',
     breadcrumb: true,
     tabs: true,
-    footer: true,
+    footer: false,
     collapsed: false,
   },
 }
