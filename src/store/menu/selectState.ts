@@ -1,3 +1,3 @@
 import { RootState } from '..'
 
-export const selectCollapsed = (state: RootState) => state.menu.isCollapsed
+export const selectMenuList = (state: RootState) => state.menu.menuList

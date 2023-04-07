@@ -24,24 +24,19 @@ export default [
           path: '/home/index',
         },
         {
-          icon: 'ExclamationCircleOutlined',
-          title: '错误页面',
-          path: '/error',
+          icon: 'FundOutlined',
+          title: 'Dashboard',
+          path: '/dashboard',
           children: [
             {
               icon: 'AppstoreOutlined',
-              path: '/404',
-              title: '404页面',
+              path: '/dashboard/dataVisualize',
+              title: '数据可视化',
             },
             {
               icon: 'AppstoreOutlined',
-              path: '/403',
-              title: '403页面',
-            },
-            {
-              icon: 'AppstoreOutlined',
-              path: '/500',
-              title: '500页面',
+              path: '/dashboard/embedded',
+              title: 'bing',
             },
           ],
         },
@@ -76,6 +71,53 @@ export default [
               icon: 'SendOutlined',
               path: '/commonly/guide',
               title: '引导',
+            },
+          ],
+        },
+        {
+          icon: 'ExclamationCircleOutlined',
+          title: '错误页面',
+          path: '/error',
+          children: [
+            {
+              icon: 'AppstoreOutlined',
+              path: '/404',
+              title: '404页面',
+            },
+            {
+              icon: 'AppstoreOutlined',
+              path: '/403',
+              title: '403页面',
+            },
+            {
+              icon: 'AppstoreOutlined',
+              path: '/500',
+              title: '500页面',
+            },
+          ],
+        },
+        {
+          icon: 'PaperClipOutlined',
+          title: '外部链接',
+          path: '/link',
+          children: [
+            {
+              icon: 'AppstoreOutlined',
+              path: '/link/github',
+              title: 'github',
+              isLink: 'https://github.com/likesandy',
+            },
+            {
+              icon: 'AppstoreOutlined',
+              path: '/link/blog',
+              title: 'blog',
+              isLink: 'https://codertao.notion.site/ilun-44ab5696061949129c63ded554abb88e',
+            },
+            {
+              icon: 'AppstoreOutlined',
+              path: '/link/leetcode',
+              title: 'leetcode',
+              isLink: 'https://leetcode.cn/u/codertao-n/',
             },
           ],
         },

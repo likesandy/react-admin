@@ -1,3 +1,37 @@
 import styled from 'styled-components'
 
-export const UploadWrapper = styled.div``
+export const UploadFileWrapper = styled.div`
+  .upload {
+    height: auto;
+    .card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      .upload-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 90%;
+        margin: 10px 0;
+      }
+    }
+    .img-box {
+      margin-bottom: 10px;
+    }
+    .form-box {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      .card {
+        margin-right: 10px;
+        &:last-child {
+          margin-right: 0;
+        }
+        .el-form {
+          width: 100%;
+        }
+      }
+    }
+  }
+`

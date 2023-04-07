@@ -7,13 +7,17 @@ export const LoginWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100vw;
-  height: 100vh;
   min-width: 550px;
+  height: 100%;
   min-height: 500px;
   background-image: url(${bgImg});
   background-position: 50%;
   background-size: cover;
+  .dark {
+    position: absolute;
+    top: 5%;
+    right: 3.2%;
+  }
   .login-box {
     box-sizing: border-box;
     display: flex;

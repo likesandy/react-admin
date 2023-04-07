@@ -1,5 +1,7 @@
-import { memo } from 'react'
+import { useAppSelector } from '@/hooks/useStote'
+import { selectThemeConfig } from '@/store/global/selectState'
 import type { FC, ReactNode } from 'react'
+import { memo } from 'react'
 import { LayoutFooterWrapper } from './style'
 
 interface IProps {
@@ -7,10 +9,15 @@ interface IProps {
 }
 
 const LayoutFooter: FC<IProps> = memo(() => {
+  const themeConfig = useAppSelector(selectThemeConfig)
   return (
-    <LayoutFooterWrapper>
-      <div>LayoutFooter</div>
-    </LayoutFooterWrapper>
+    <>
+      {themeConfig.footer && (
+        <LayoutFooterWrapper>
+          <div>LayoutFooter</div>
+        </LayoutFooterWrapper>
+      )}
+    </>
   )
 })
 

@@ -1,5 +1,6 @@
 import loginLeft from '@/assets/images/login_left.png'
 import logo from '@/assets/images/logo.png'
+import SwitchDark from '@/components/SwitchDark'
 import type { FC, ReactNode } from 'react'
 import { memo } from 'react'
 import LoginForm from './components/LoginForm'
@@ -12,6 +13,7 @@ interface IProps {
 const Login: FC<IProps> = memo(() => {
   return (
     <LoginWrapper>
+      <SwitchDark />
       <div className="login-box">
         <div className="login-left">
           <img src={loginLeft} alt="login" />

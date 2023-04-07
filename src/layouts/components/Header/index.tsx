@@ -1,5 +1,3 @@
-import { useAppDispatch, useAppSelector } from '@/hooks/useStote'
-import { selectCollapsed } from '@/store/menu/selectState'
 import { Layout } from 'antd'
 import type { FC, ReactNode } from 'react'
 import { memo } from 'react'
@@ -8,6 +6,7 @@ import BreadcrumbNav from './components/BreadcrumbNav'
 import CollapseIcon from './components/CollapseIcon'
 import Guide from './components/Guide'
 import HeaderSearch from './components/Search'
+import Theme from './components/Theme'
 import { HeaderWrapper } from './style'
 
 interface IProps {
@@ -16,8 +15,6 @@ interface IProps {
 
 const LayoutHeader: FC<IProps> = memo((props) => {
   const { Header } = Layout
-  const isCollapsed = useAppSelector(selectCollapsed)
-  const dispatch = useAppDispatch()
   return (
     <HeaderWrapper>
       <Header>
@@ -28,6 +25,7 @@ const LayoutHeader: FC<IProps> = memo((props) => {
         <div className="header-right">
           <Guide />
           <HeaderSearch />
+          <Theme />
           <AvatarIcon />
           <span className="username">ilun</span>
         </div>

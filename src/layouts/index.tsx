@@ -1,5 +1,5 @@
 import { useAppSelector } from '@/hooks/useStote'
-import { selectCollapsed } from '@/store/menu/selectState'
+import { selectThemeConfig } from '@/store/global/selectState'
 import { Layout } from 'antd'
 import React from 'react'
 import { Outlet } from 'react-router-dom'
@@ -12,12 +12,12 @@ import { LayoutsWrapper } from './style'
 const { Sider, Content } = Layout
 
 const App: React.FC = () => {
-  const isCollapsed = useAppSelector(selectCollapsed)
+  const { collapsed } = useAppSelector(selectThemeConfig)
 
   return (
     <LayoutsWrapper>
       <Layout>
-        <Sider trigger={null} collapsible collapsed={isCollapsed} width={220} theme="dark">
+        <Sider trigger={null} collapsible collapsed={!collapsed} width={220} theme="dark">
           <LayoutMenu />
         </Sider>
         <Layout>

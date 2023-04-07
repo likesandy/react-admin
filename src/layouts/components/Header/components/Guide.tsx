@@ -6,9 +6,7 @@ interface IProps {
   children?: ReactNode
 }
 
-const guide = () => {
-  console.log('1')
-}
+const guide = () => {}
 
 const Guide: FC<IProps> = memo(() => {
   return (

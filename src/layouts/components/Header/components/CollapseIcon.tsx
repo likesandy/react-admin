@@ -1,26 +1,26 @@
-import { memo } from 'react'
-import type { FC, ReactNode } from 'react'
-import React from 'react'
 import { useAppDispatch, useAppSelector } from '@/hooks/useStote'
-import { selectCollapsed } from '@/store/menu/selectState'
+import { setThemeConfig } from '@/store/global/reducer'
+import { selectThemeConfig } from '@/store/global/selectState'
 import { MenuFoldOutlined, MenuUnfoldOutlined } from '@ant-design/icons'
-import { setCollapsedAction } from '@/store/menu/reducer'
+import type { FC, ReactNode } from 'react'
+import { memo } from 'react'
 
 interface IProps {
   children?: ReactNode
 }
 
 const CollapseIcon: FC<IProps> = memo(() => {
-  const isCollapsed = useAppSelector(selectCollapsed)
+  const themeConfig = useAppSelector(selectThemeConfig)
+  const { collapsed } = themeConfig
   const dispatch = useAppDispatch()
   return (
     <>
       <div
         className="collapsed"
         onClick={() => {
-          dispatch(setCollapsedAction(!isCollapsed))
+          dispatch(setThemeConfig({ ...themeConfig, collapsed: !collapsed }))
         }}>
-        {isCollapsed ? <MenuUnfoldOutlined id="isCollapse" /> : <MenuFoldOutlined id="isCollapse" />}
+        {collapsed ? <MenuFoldOutlined id="isCollapse" /> : <MenuUnfoldOutlined id="isCollapse" />}
       </div>
     </>
   )

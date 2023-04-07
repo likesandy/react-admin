@@ -1,5 +1,5 @@
 import App from './App'
-import '@/assets/css/index.css'
+import '@/styles/index.less'
 import { Provider } from 'react-redux'
 import store, { persistor } from './store'
 import { PersistGate } from 'redux-persist/integration/react'

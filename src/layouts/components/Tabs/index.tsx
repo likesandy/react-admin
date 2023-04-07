@@ -9,6 +9,7 @@ import { message, Tabs } from 'antd'
 import { FC, memo, ReactNode, useEffect } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { LayoutTabsWrapper } from './style'
+import { selectThemeConfig } from '@/store/global/selectState'
 
 interface IProps {
   children?: ReactNode
@@ -59,32 +60,37 @@ const LayoutTabs: FC<IProps> = memo(() => {
     }
     dispatch(setTabsListAction(tabsList.filter((item: Menu.MenuOptions) => item.path !== tabPath)))
   }
+  const themeConfig = useAppSelector(selectThemeConfig)
 
   return (
-    <LayoutTabsWrapper>
-      <Tabs
-        animated
-        hideAdd
-        activeKey={pathname}
-        type="editable-card"
-        onTabClick={onTabClick}
-        onEdit={(path) => {
-          delTabs(path as string)
-        }}
-        items={tabsList.map((item: Menu.MenuOptions) => {
-          return {
-            label: (
-              <span>
-                {item.path == HOME_URL ? <HomeFilled /> : ''}
-                {item.title}
-              </span>
-            ),
-            key: item.path,
-            closable: item.path !== HOME_URL,
-          }
-        })}
-      />
-    </LayoutTabsWrapper>
+    <>
+      {!themeConfig.tabs && (
+        <LayoutTabsWrapper>
+          <Tabs
+            animated
+            hideAdd
+            activeKey={pathname}
+            type="editable-card"
+            onTabClick={onTabClick}
+            onEdit={(path) => {
+              delTabs(path as string)
+            }}
+            items={tabsList.map((item: Menu.MenuOptions) => {
+              return {
+                label: (
+                  <span>
+                    {item.path == HOME_URL ? <HomeFilled /> : ''}
+                    {item.title}
+                  </span>
+                ),
+                key: item.path,
+                closable: item.path !== HOME_URL,
+              }
+            })}
+          />
+        </LayoutTabsWrapper>
+      )}
+    </>
   )
 })
 
