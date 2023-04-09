@@ -5,6 +5,7 @@ import AvatarIcon from './components/AvatarIcon'
 import BreadcrumbNav from './components/BreadcrumbNav'
 import CollapseIcon from './components/CollapseIcon'
 import Fullscreen from './components/Fullscreen'
+import Locale from './components/Locale'
 import HeaderSearch from './components/Search'
 import Theme from './components/Theme'
 import { HeaderWrapper } from './style'
@@ -24,6 +25,7 @@ const LayoutHeader: FC<IProps> = memo((props) => {
         </div>
         <div className="header-right">
           <HeaderSearch />
+          <Locale />
           <Theme />
           <Fullscreen />
           <span className="username">ilun</span>

@@ -3,7 +3,7 @@ import { RouteObject } from '@/routers/interface'
 import React from 'react'
 import lazyLoad from '../utils/lazyLoad'
 
-// 首页模块
+// 常用组件模块
 const commonlyRouter: Array<RouteObject> = [
   {
     element: <LayoutIndex />,
@@ -27,6 +27,15 @@ const commonlyRouter: Array<RouteObject> = [
           requiresAuth: true,
           title: 'upload',
           key: 'upload',
+        },
+      },
+      {
+        path: '/commonly/internationalization',
+        element: lazyLoad(React.lazy(() => import('@/views/commonly/internationalization'))),
+        meta: {
+          requiresAuth: true,
+          title: 'internationalization',
+          key: 'internationalization',
         },
       },
     ],

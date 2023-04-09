@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import { IGlobalState } from './type'
 import { ThemeConfigType } from '../types'
+import { IGlobalState } from './type'
 
 const initialState: IGlobalState = {
   token: '',
@@ -14,6 +14,7 @@ const initialState: IGlobalState = {
     footer: false,
     collapsed: false,
   },
+  language: 'en',
 }
 
 const GlobalSlice = createSlice({
@@ -26,9 +27,12 @@ const GlobalSlice = createSlice({
     setThemeConfig(state, action: PayloadAction<ThemeConfigType>) {
       state.themeConfig = action.payload
     },
+    setLanguage(state, action: PayloadAction<string>) {
+      state.language = action.payload
+    },
   },
 })
 const { reducer, actions } = GlobalSlice
 
 export default reducer
-export const { setTokenAction, setThemeConfig } = actions
+export const { setTokenAction, setThemeConfig, setLanguage } = actions

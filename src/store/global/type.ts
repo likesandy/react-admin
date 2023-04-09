@@ -17,4 +17,5 @@ export interface IGlobalState {
     // 菜单折叠
     collapsed: boolean
   }
+  language: string
 }

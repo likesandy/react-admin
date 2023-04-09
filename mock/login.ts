@@ -72,6 +72,11 @@ export default [
               path: '/commonly/guide',
               title: '引导',
             },
+            {
+              icon: 'TranslationOutlined',
+              path: '/commonly/internationalization',
+              title: '国际化',
+            },
           ],
         },
         {
