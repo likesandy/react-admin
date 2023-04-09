@@ -16,7 +16,7 @@ const Theme: FC<IProps> = memo(() => {
     setOpen(false)
   }
   const themeConfig = useAppSelector(selectThemeConfig)
-  const { collapsed, weakOrGray, footer } = themeConfig
+  const { collapsed, weakOrGray, footer, tabs, breadcrumb } = themeConfig
   const dispatch = useAppDispatch()
 
   const onChange = (checked: boolean, keyName: string) => {
@@ -81,6 +81,7 @@ const Theme: FC<IProps> = memo(() => {
         <div className="theme-item">
           <span>面包屑导航</span>
           <Switch
+            checked={!breadcrumb}
             onChange={(e) => {
               onChange(e, 'breadcrumb')
             }}
@@ -89,6 +90,7 @@ const Theme: FC<IProps> = memo(() => {
         <div className="theme-item">
           <span>标签栏</span>
           <Switch
+            checked={!tabs}
             onChange={(e) => {
               onChange(e, 'tabs')
             }}

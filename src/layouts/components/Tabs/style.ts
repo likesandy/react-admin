@@ -1,12 +1,15 @@
 import styled from 'styled-components'
 
 export const LayoutTabsWrapper = styled.div`
+  display: flex;
   position: relative;
+  justify-content: space-between;
+  align-items: center;
   border-bottom: 1px solid #e4e7ed;
   background-color: #ffffff !important;
   border-color: #e4e7ed !important;
   .ant-tabs {
-    padding: 0 20px;
+    padding: 0 90px 0 13px;
     .ant-tabs-nav {
       margin: 0;
       &::before {
@@ -60,6 +63,9 @@ export const LayoutTabsWrapper = styled.div`
         }
       }
     }
+  }
+  .right-button {
+    margin-right: 15px;
   }
   .more-button {
     position: absolute;

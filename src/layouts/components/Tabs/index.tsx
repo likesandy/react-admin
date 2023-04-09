@@ -10,6 +10,7 @@ import { FC, memo, ReactNode, useEffect } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { LayoutTabsWrapper } from './style'
 import { selectThemeConfig } from '@/store/global/selectState'
+import MoreButton from './components/MoreButton'
 
 interface IProps {
   children?: ReactNode
@@ -88,6 +89,9 @@ const LayoutTabs: FC<IProps> = memo(() => {
               }
             })}
           />
+          <div className="right-button">
+            <MoreButton delTabs={delTabs} />
+          </div>
         </LayoutTabsWrapper>
       )}
     </>

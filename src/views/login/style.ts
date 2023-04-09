@@ -1,5 +1,5 @@
-import styled from 'styled-components'
 import bgImg from '@/assets/images/login_bg.svg'
+import styled from 'styled-components'
 
 export const LoginWrapper = styled.div`
   background-color: #eeeeee !important;

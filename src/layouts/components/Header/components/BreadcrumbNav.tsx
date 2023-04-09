@@ -18,7 +18,7 @@ const BreadcrumbNav: FC<IProps> = memo(() => {
   const themeConfig = useAppSelector(selectThemeConfig)
   return (
     <>
-      {themeConfig?.breadcrumb && (
+      {!themeConfig?.breadcrumb && (
         <div id="breadcrumb">
           <Breadcrumb>
             <Breadcrumb.Item key="home" href={HOME_URL}>
