@@ -30,7 +30,7 @@ const Locale: FC<IProps> = memo(() => {
   return (
     <>
       <Dropdown menu={{ items }} trigger={['click']}>
-        <TranslationOutlined className="icon-style" />
+        <TranslationOutlined className="icon-style" id="internationalization" />
       </Dropdown>
     </>
   )
