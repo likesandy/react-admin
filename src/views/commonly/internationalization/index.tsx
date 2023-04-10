@@ -1,4 +1,4 @@
-import { Button, DatePicker, Modal, Pagination, Popconfirm, Space, TimePicker } from 'antd'
+import { Alert, Button, DatePicker, Modal, Pagination, Popconfirm, Space, TimePicker } from 'antd'
 import { FC, ReactNode, memo, useState } from 'react'
 
 interface IProps {
@@ -37,6 +37,11 @@ const internationalization: FC<IProps> = memo(() => {
   return (
     <>
       <div className="card content-box">
+        <Alert
+          message="请点击右上角的切换语言查看效果"
+          type="warning"
+          style={{ marginBottom: '20px' }}
+        />
         <Modal title="Locale Modal" open={open} onCancel={handleCancel} onOk={handleOk}>
           <p>Locale Modal</p>
         </Modal>
