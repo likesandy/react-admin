@@ -1,7 +1,5 @@
 import { HOME_URL } from '@/config/config'
-import { useAppSelector } from '@/hooks/useStote'
-import { selectBreadcrumbList } from '@/store/breadcrumb/selectState'
-import { selectThemeConfig } from '@/store/global/selectState'
+import { RootState, useSelector } from '@/store'
 import { Breadcrumb } from 'antd'
 import type { FC, ReactNode } from 'react'
 import { memo } from 'react'
@@ -13,9 +11,11 @@ interface IProps {
 
 const BreadcrumbNav: FC<IProps> = memo(() => {
   const { pathname } = useLocation()
-  const breadcrumbList = useAppSelector<any>(selectBreadcrumbList)[pathname]
+  const breadcrumbList = useSelector<any>((state: RootState) => state.breadcrumb.breadcrumbList)[
+    pathname
+  ]
 
-  const themeConfig = useAppSelector(selectThemeConfig)
+  const themeConfig = useSelector((state: RootState) => state.global.themeConfig)
   return (
     <>
       {!themeConfig?.breadcrumb && (

@@ -1,6 +1,5 @@
-import { useAppDispatch, useAppSelector } from '@/hooks/useStote'
-import { setLanguage } from '@/store/global/reducer'
-import { selectLanguage } from '@/store/global/selectState'
+import { RootState, useAppDispatch, useSelector } from '@/store'
+import { setLanguage } from '@/store/modules/global'
 import { TranslationOutlined } from '@ant-design/icons'
 import { Dropdown, MenuProps } from 'antd'
 import type { FC, ReactNode } from 'react'
@@ -11,7 +10,7 @@ interface IProps {
 }
 
 const Locale: FC<IProps> = memo(() => {
-  const language = useAppSelector(selectLanguage)
+  const language = useSelector((state: RootState) => state.global.language)
   const dispatch = useAppDispatch()
   const items: MenuProps['items'] = [
     {

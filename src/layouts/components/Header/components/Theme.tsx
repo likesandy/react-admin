@@ -1,7 +1,6 @@
 import SwitchDark from '@/components/SwitchDark'
-import { useAppDispatch, useAppSelector } from '@/hooks/useStote'
-import { setThemeConfig } from '@/store/global/reducer'
-import { selectThemeConfig } from '@/store/global/selectState'
+import { RootState, useAppDispatch, useSelector } from '@/store'
+import { setThemeConfig } from '@/store/modules/global'
 import { FireOutlined, SettingOutlined, SkinOutlined } from '@ant-design/icons'
 import { Divider, Drawer, Switch } from 'antd'
 import { FC, ReactNode, memo, useState } from 'react'
@@ -15,7 +14,7 @@ const Theme: FC<IProps> = memo(() => {
   const onClose = () => {
     setOpen(false)
   }
-  const themeConfig = useAppSelector(selectThemeConfig)
+  const themeConfig = useSelector((state: RootState) => state.global.themeConfig)
   const { collapsed, weakOrGray, footer, tabs, breadcrumb } = themeConfig
   const dispatch = useAppDispatch()
 

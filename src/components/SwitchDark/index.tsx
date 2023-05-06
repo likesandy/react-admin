@@ -1,6 +1,5 @@
-import { useAppSelector } from '@/hooks/useStote'
-import { setThemeConfig } from '@/store/global/reducer'
-import { selectThemeConfig } from '@/store/global/selectState'
+import { RootState, useSelector } from '@/store'
+import { setThemeConfig } from '@/store/modules/global'
 import { Switch } from 'antd'
 import type { FC, ReactNode } from 'react'
 import { memo } from 'react'
@@ -11,7 +10,7 @@ interface IProps {
 }
 
 const SwitchDark: FC<IProps> = memo(() => {
-  const themeConfig = useAppSelector(selectThemeConfig)
+  const themeConfig = useSelector((state: RootState) => state.global.themeConfig)
   const dispath = useDispatch()
   const onChange = (checked: boolean) => {
     dispath(setThemeConfig({ ...themeConfig, isDark: checked }))

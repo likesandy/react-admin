@@ -1,5 +1,4 @@
-import { useAppSelector } from '@/hooks/useStote'
-import { selectThemeConfig } from '@/store/global/selectState'
+import { RootState, useSelector } from '@/store'
 import { Layout } from 'antd'
 import React from 'react'
 import { Outlet } from 'react-router-dom'
@@ -12,7 +11,7 @@ import { LayoutsWrapper } from './style'
 const { Sider, Content } = Layout
 
 const App: React.FC = () => {
-  const { collapsed } = useAppSelector(selectThemeConfig)
+  const { collapsed } = useSelector((state: RootState) => state.global.themeConfig)
 
   return (
     <LayoutsWrapper>

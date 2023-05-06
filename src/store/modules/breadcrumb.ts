@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import { IbreadcrumbState } from './type'
+import { BreadcrumbState } from '../interface'
 
-const initialState: IbreadcrumbState = {
+const initialState: BreadcrumbState = {
   breadcrumbList: {},
 }
 
@@ -15,8 +15,5 @@ export const breadcrumbSlice = createSlice({
   },
 })
 
-const { actions, reducer } = breadcrumbSlice
-
-export const { setBreadcrumbListAction } = actions
-
-export default reducer
+export const { setBreadcrumbListAction } = breadcrumbSlice.actions
+export default breadcrumbSlice.reducer

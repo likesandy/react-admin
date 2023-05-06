@@ -1,7 +1,7 @@
 import avatar from '@/assets/images/avatar.jpg'
 import { HOME_URL } from '@/config/config'
 import store from '@/store'
-import { setTokenAction } from '@/store/global/reducer'
+import { setTokenAction } from '@/store/modules/global'
 import { ExclamationCircleOutlined } from '@ant-design/icons'
 import { Avatar, Dropdown, MenuProps, message, Modal } from 'antd'
 import type { FC, ReactNode } from 'react'

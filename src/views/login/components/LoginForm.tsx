@@ -1,9 +1,10 @@
 import { HOME_URL } from '@/config/config'
-import { useAppDispatch } from '@/hooks/useStote'
 import { Login } from '@/service/interface'
 import { postLogin } from '@/service/modules/login'
-import { setTokenAction } from '@/store/global/reducer'
-import { setTabsListAction } from '@/store/tabs/reducer'
+import { useAppDispatch } from '@/store'
+import { setTokenAction } from '@/store/modules/global'
+import { setTabsListAction } from '@/store/modules/tabs'
+
 import { LockOutlined, UserOutlined } from '@ant-design/icons'
 import { Button, Form, Input, message } from 'antd'
 import type { FC, ReactNode } from 'react'

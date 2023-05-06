@@ -1,14 +1,13 @@
 import { Action, combineReducers, configureStore, ThunkAction } from '@reduxjs/toolkit'
+import { TypedUseSelectorHook, useDispatch, useSelector as useReduxSelector } from 'react-redux'
 import { FLUSH, PAUSE, PERSIST, persistReducer, persistStore, PURGE, REGISTER, REHYDRATE } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
-import global from './global'
-import login from './login'
-import menu from './menu'
-import breadcrumb from './breadcrumb'
-import tabs from './tabs'
+import breadcrumb from './modules/breadcrumb'
+import global from './modules/global'
+import menu from './modules/menu'
+import tabs from './modules/tabs'
 
 const reducers = combineReducers({
-  login,
   global,
   menu,
   breadcrumb,
@@ -42,3 +41,5 @@ export default store
 export type AppDispatch = typeof store.dispatch
 export type RootState = ReturnType<typeof store.getState>
 export type AppThunk<ReturnType = void> = ThunkAction<ReturnType, RootState, unknown, Action<string>>
+export const useSelector: TypedUseSelectorHook<RootState> = useReduxSelector
+export const useAppDispatch = () => useDispatch<AppDispatch>()

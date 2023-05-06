@@ -1,8 +1,8 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import { ThemeConfigType } from '../types'
-import { IGlobalState } from './type'
+import { GlobalState, ThemeConfigType } from '../interface'
 
-const initialState: IGlobalState = {
+
+const initialState: GlobalState = {
   token: '',
   userInfo: '',
   themeConfig: {
@@ -17,7 +17,7 @@ const initialState: IGlobalState = {
   language: 'en',
 }
 
-const GlobalSlice = createSlice({
+const globalSlice = createSlice({
   name: 'global',
   initialState,
   reducers: {
@@ -32,7 +32,6 @@ const GlobalSlice = createSlice({
     },
   },
 })
-const { reducer, actions } = GlobalSlice
 
-export default reducer
-export const { setTokenAction, setThemeConfig, setLanguage } = actions
+export const { setTokenAction, setThemeConfig, setLanguage } = globalSlice.actions
+export default globalSlice.reducer

@@ -1,16 +1,15 @@
 import { HOME_URL } from '@/config/config'
-import { useAppDispatch, useAppSelector } from '@/hooks/useStote'
 import { routerArray } from '@/routers'
-import { setTabsListAction } from '@/store/tabs/reducer'
-import { selectTabsList } from '@/store/tabs/selectState'
+
 import { searchRoute } from '@/utils/utils'
 import { HomeFilled, HomeOutlined } from '@ant-design/icons'
 import { message, Tabs } from 'antd'
 import { FC, memo, ReactNode, useEffect } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { LayoutTabsWrapper } from './style'
-import { selectThemeConfig } from '@/store/global/selectState'
 import MoreButton from './components/MoreButton'
+import { RootState, useAppDispatch, useSelector } from '@/store'
+import { setTabsListAction } from '@/store/modules/tabs'
 
 interface IProps {
   children?: ReactNode
@@ -23,7 +22,7 @@ const LayoutTabs: FC<IProps> = memo(() => {
     addTabs()
   }, [pathname])
 
-  const tabsList = useAppSelector(selectTabsList)
+  const tabsList = useSelector((state: RootState) => state.tabs.tabsList)
   const dispatch = useAppDispatch()
 
   // add tabs
@@ -61,7 +60,7 @@ const LayoutTabs: FC<IProps> = memo(() => {
     }
     dispatch(setTabsListAction(tabsList.filter((item: Menu.MenuOptions) => item.path !== tabPath)))
   }
-  const themeConfig = useAppSelector(selectThemeConfig)
+  const themeConfig = useSelector((state: RootState) => state.global.themeConfig)
 
   return (
     <>

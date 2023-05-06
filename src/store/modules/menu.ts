@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import { IMenuState } from './type'
+import { MenuState } from '../interface'
 
-const initialState: IMenuState = {
+const initialState: MenuState = {
   menuList: [],
 }
 
@@ -15,8 +15,6 @@ export const menuSlice = createSlice({
   },
 })
 
-const { actions, reducer } = menuSlice
 
-export const { setMenuListAction } = actions
-
-export default reducer
+export const { setMenuListAction } = menuSlice.actions
+export default menuSlice.reducer

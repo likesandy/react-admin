@@ -1,4 +1,8 @@
-export interface IGlobalState {
+export interface BreadcrumbState {
+  breadcrumbList: {}
+}
+
+export interface GlobalState {
   token: string
   userInfo: any
   themeConfig: {
@@ -18,4 +22,22 @@ export interface IGlobalState {
     collapsed: boolean
   }
   language: string
+}
+
+export interface MenuState {
+  menuList: [],
+}
+
+export interface TabsList {
+  tabsList: Menu.MenuOptions[]
+}
+
+export interface ThemeConfigType {
+  primary: string
+  isDark: boolean
+  weakOrGray: 'weak' | 'gray' | string
+  breadcrumb: boolean
+  tabs: boolean
+  footer: boolean
+  collapsed: boolean
 }

@@ -1,6 +1,5 @@
-import { useAppDispatch, useAppSelector } from '@/hooks/useStote'
-import { setThemeConfig } from '@/store/global/reducer'
-import { selectThemeConfig } from '@/store/global/selectState'
+import { RootState, useAppDispatch, useSelector } from '@/store'
+import { setThemeConfig } from '@/store/modules/global'
 import { MenuFoldOutlined, MenuUnfoldOutlined } from '@ant-design/icons'
 import type { FC, ReactNode } from 'react'
 import { memo } from 'react'
@@ -10,7 +9,7 @@ interface IProps {
 }
 
 const CollapseIcon: FC<IProps> = memo(() => {
-  const themeConfig = useAppSelector(selectThemeConfig)
+  const themeConfig = useSelector((state: RootState) => state.global.themeConfig)
   const { collapsed } = themeConfig
   const dispatch = useAppDispatch()
   return (

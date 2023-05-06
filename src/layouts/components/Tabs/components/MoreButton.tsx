@@ -1,7 +1,6 @@
 import { HOME_URL } from '@/config/config'
-import { useAppDispatch, useAppSelector } from '@/hooks/useStote'
-import { setTabsListAction } from '@/store/tabs/reducer'
-import { selectTabsList } from '@/store/tabs/selectState'
+import { RootState, useAppDispatch, useSelector } from '@/store'
+import { setTabsListAction } from '@/store/modules/tabs'
 import { DownOutlined } from '@ant-design/icons'
 import { Button, Dropdown, MenuProps } from 'antd'
 import type { FC, ReactNode } from 'react'
@@ -16,7 +15,7 @@ interface IProps {
 const MoreButton: FC<IProps> = memo(({ delTabs }) => {
   const { pathname } = useLocation()
   const navigate = useNavigate()
-  const tabsList = useAppSelector(selectTabsList)
+  const tabsList = useSelector((state: RootState) => state.tabs.tabsList)
   const dispatch = useAppDispatch()
 
   // close multipleTab

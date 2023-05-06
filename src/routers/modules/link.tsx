@@ -27,14 +27,6 @@ const homeRouter: Array<RouteObject> = [
           key: 'blog',
         },
       },
-      {
-        path: '/link/leetcode',
-        element: lazyLoad(lazy(() => import('@/views/link/leetcode'))),
-        meta: {
-          title: 'leetcode',
-          key: 'leetcode',
-        },
-      },
     ],
   },
 ]

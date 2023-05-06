@@ -8,8 +8,8 @@ const Note: FC<IProps> = memo(() => {
     <div className="card content-box">
       <span className="text">
         blog：
-        <a href="https://codertao.notion.site/ilun-44ab5696061949129c63ded554abb88e" target="_blank" rel="noreferrer">
-          https://codertao.notion.site/ilun-44ab5696061949129c63ded554abb88e
+        <a href="https://codertao.icu" target="_blank" rel="noreferrer">
+          https://codertao.icu
         </a>
         🍒🍉🍊
       </span>
