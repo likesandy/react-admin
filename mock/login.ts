@@ -80,6 +80,43 @@ export default [
           ],
         },
         {
+          icon: 'PieChartOutlined',
+          title: 'Echarts',
+          path: '/echarts',
+          children: [
+            {
+              icon: 'AppstoreOutlined',
+              path: '/echarts/waterChart',
+              title: '水型图',
+            },
+            {
+              icon: 'AppstoreOutlined',
+              path: '/echarts/columnChart',
+              title: '柱状图',
+            },
+            {
+              icon: 'AppstoreOutlined',
+              path: '/echarts/lineChart',
+              title: '折线图',
+            },
+            {
+              icon: 'AppstoreOutlined',
+              path: '/echarts/pieChart',
+              title: '饼图',
+            },
+            {
+              icon: 'AppstoreOutlined',
+              path: '/echarts/radarChart',
+              title: '雷达图',
+            },
+            {
+              icon: 'AppstoreOutlined',
+              path: '/echarts/nestedChart',
+              title: '嵌套环形图',
+            },
+          ],
+        },
+        {
           icon: 'ExclamationCircleOutlined',
           title: '错误页面',
           path: '/error',
