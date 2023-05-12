@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { GlobalState, ThemeConfigType } from '../interface'
-
+import { SizeType } from 'antd/es/config-provider/SizeContext'
 
 const initialState: GlobalState = {
   token: '',
@@ -15,6 +15,7 @@ const initialState: GlobalState = {
     collapsed: false,
   },
   language: 'en',
+  assemblySize: 'middle',
 }
 
 const globalSlice = createSlice({
@@ -30,8 +31,11 @@ const globalSlice = createSlice({
     setLanguage(state, action: PayloadAction<string>) {
       state.language = action.payload
     },
+    setAssemblySize(state, action: PayloadAction<SizeType>) {
+      state.assemblySize = action.payload
+    },
   },
 })
 
-export const { setTokenAction, setThemeConfig, setLanguage } = globalSlice.actions
+export const { setTokenAction, setThemeConfig, setLanguage, setAssemblySize } = globalSlice.actions
 export default globalSlice.reducer

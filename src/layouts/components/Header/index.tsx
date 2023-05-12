@@ -9,6 +9,7 @@ import Locale from './components/Locale'
 import HeaderSearch from './components/Search'
 import Theme from './components/Theme'
 import { HeaderWrapper } from './style'
+import AssemblySize from './components/AssemblySize'
 
 interface IProps {
   children?: ReactNode
@@ -25,6 +26,7 @@ const LayoutHeader: FC<IProps> = memo((props) => {
         </div>
         <div className="header-right">
           <HeaderSearch />
+          <AssemblySize />
           <Locale />
           <Theme />
           <Fullscreen />

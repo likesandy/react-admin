@@ -5,6 +5,7 @@ const internationalization = document.querySelector('#internationalization')
 const breadcrumb = document.querySelector('#breadcrumb')
 const eltheme4 = document.querySelector('#theme')
 const fullScreen = document.querySelector('#full-screen')
+const componentSize = document.querySelector('#component-size')
 
 const steps = [
   {
@@ -16,6 +17,11 @@ const steps = [
     title: '面包屑导航',
     description: '这里是面包屑导航，可以通过点击右侧的🥼里界面设置选择面包屑导航选项进行调整',
     target: () => breadcrumb,
+  },
+  {
+    title: '组件大小切换',
+    description: '这里是组件大小切换，可以在这里对Antd组件大小进行切换',
+    target: () => componentSize,
   },
   {
     title: '国际化',

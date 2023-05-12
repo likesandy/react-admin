@@ -24,6 +24,40 @@ export default [
           path: '/home/index',
         },
         {
+          icon: 'FileDoneOutlined',
+          title: '文章',
+          path: '/article',
+          children: [
+            {
+              icon: 'FileTextOutlined',
+              path: '/article/ranking',
+              title: '文章排名',
+            },
+            {
+              icon: 'FileAddOutlined',
+              path: '/article/create',
+              title: '创建文章',
+            },
+          ],
+        },
+        {
+          icon: 'UnlockOutlined',
+          title: '权限管理',
+          path: '/auth',
+          children: [
+            {
+              icon: 'MenuOutlined',
+              path: '/auth/menu',
+              title: '菜单权限',
+            },
+            {
+              icon: 'MenuOutlined',
+              path: '/auth/button',
+              title: '按钮权限',
+            },
+          ],
+        },
+        {
           icon: 'FundOutlined',
           title: 'Dashboard',
           path: '/dashboard',
@@ -37,23 +71,6 @@ export default [
               icon: 'AppstoreOutlined',
               path: '/dashboard/embedded',
               title: 'bing',
-            },
-          ],
-        },
-        {
-          icon: 'EditOutlined',
-          title: '编辑器',
-          path: '/editor',
-          children: [
-            {
-              icon: 'FileMarkdownOutlined',
-              path: '/editor/markdown',
-              title: 'markdown',
-            },
-            {
-              icon: 'FileOutlined',
-              path: '/editor/tinymce',
-              title: '富文本编辑器',
             },
           ],
         },

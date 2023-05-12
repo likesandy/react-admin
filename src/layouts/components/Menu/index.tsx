@@ -1,4 +1,4 @@
-import { getMenuList } from '@/service/modules/login'
+import { getMenuList } from '@/api/modules/login'
 
 import { findAllBreadcrumb, getOpenKeys, searchRoute } from '@/utils/utils'
 import * as Icons from '@ant-design/icons'
@@ -65,7 +65,7 @@ const LayoutMenu: FC<IProps> = () => {
 
   const dispatch = useAppDispatch()
   const getMenuData = async () => {
-    const { data } = await getMenuList()
+    const data = await getMenuList()
     if (!data) return
     setMenuList(deepLoopFloat(data))
     // 存储处理过后的所有面包屑导航栏到 redux 中

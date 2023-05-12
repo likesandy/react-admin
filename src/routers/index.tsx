@@ -4,6 +4,7 @@ import { RouteObject } from './interface'
 
 type Module = { [key: string]: any }
 // * 导入所有router
+// import.meta.globEager 已经弃用，请使用 import.meta.glob('*', { eager: true }) 来代替。
 const metaRouters = import.meta.glob('./modules/*.tsx', { eager: true }) as Record<string, Module>
 
 // * 处理路由

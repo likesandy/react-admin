@@ -1,5 +1,13 @@
+import { SizeType } from 'antd/es/config-provider/SizeContext'
+
 export interface BreadcrumbState {
   breadcrumbList: {}
+}
+
+export interface AuthStoreState {
+  authButtonList: {
+    [key: string]: string[]
+  }
 }
 
 export interface GlobalState {
@@ -22,10 +30,11 @@ export interface GlobalState {
     collapsed: boolean
   }
   language: string
+  assemblySize: SizeType
 }
 
 export interface MenuState {
-  menuList: [],
+  menuList: []
 }
 
 export interface TabsList {

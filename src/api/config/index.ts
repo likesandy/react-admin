@@ -1,5 +1,6 @@
 // 1.手动切换
 // export const BASE_URL = 'http://152.136.185.210:4000'
+// export const baseURL = 'https://mock.mengxuegu.com/mock/645922817ba95d67784d5fe6'
 // export const BASE_URL = 'http://codercba.prod:9002'
 export const PORT1 = '/api'
 export const TIME_OUT = 10000

@@ -1,4 +1,4 @@
-import { ThemeConfigType } from '@/store/modules/types'
+import { ThemeConfigType } from '@/store/interface'
 
 import { disable as disableDarkMode, enable as enableDarkMode } from 'darkreader'
 

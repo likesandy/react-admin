@@ -79,7 +79,10 @@ export const LoginWrapper = styled.div`
         margin-top: 10px;
         white-space: nowrap;
         .ant-form-item-control-input-content {
+          display: flex;
+          justify-content: space-between;
           .ant-btn {
+            width: 170px;
             span {
               font-size: 14px;
             }
