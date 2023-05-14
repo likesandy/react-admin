@@ -1,4 +1,4 @@
-import loginLeft from '@/assets/images/login_left.png'
+import loginLeft from '@/assets/images/login_left.svg'
 import logo from '@/assets/images/logo.png'
 import SwitchDark from '@/components/SwitchDark'
 import type { FC, ReactNode } from 'react'
