@@ -9,6 +9,7 @@ export const searchRoute = (path: string, routes: RouteObject[] = []): RouteObje
       if (Object.keys(res).length) result = res
     }
   }
+
   return result
 }
 

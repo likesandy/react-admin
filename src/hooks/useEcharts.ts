@@ -26,6 +26,5 @@ export const useEcharts = (options: echarts.EChartsCoreOption, data?: any) => {
       myChart.current?.dispose()
     }
   }, [])
-
   return { chartDom }
 }

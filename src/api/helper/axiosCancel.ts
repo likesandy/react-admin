@@ -21,7 +21,7 @@ export class AxiosCanceler {
     // * 在请求开始前，对之前的请求做检查取消操作
     this.removePending(config)
     const url = getPendingUrl(config)
-    config.signal ||= signal
+    config.signal ||= signal 
     if (!pendingMap.has(url)) {
       // 如果 pending 中不存在当前请求，则添加进去
       pendingMap.set(url, () => controller.abort)

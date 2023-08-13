@@ -13,12 +13,14 @@ import 'dayjs/locale/zh-cn'
 import i18n from './language'
 import { RootState, useSelector } from './store'
 import { setLanguage } from './store/modules/global'
+import { includes } from 'lodash'
 
 interface IProps {
   children?: ReactNode
 }
 
 const App: FC<IProps> = memo(() => {
+
   const { themeConfig, language } = useSelector((state: RootState) => state.global)
   useTheme(themeConfig)
 

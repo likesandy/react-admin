@@ -24,6 +24,9 @@ interface TRequestConfig<T = any> extends AxiosRequestConfig {
   url: string
 }
 
+// ? 这个注释好神奇是蓝色的
+// TODO 这个都知道
+
 const axiosCanceler = new AxiosCanceler()
 
 const config = {
@@ -50,7 +53,9 @@ class TRequest {
         // * 将当前请求添加到 pending 中
         NProgress.start()
         // * 如果当前请求不需要显示 loading,在api服务中通过指定的第三个参数: { headers: { noLoading: true } }来控制不显示loading，参见loginApi
+        // TODO 目前和Suspense有冲突，会有两个loading效果，暂不使用自定义loading
         config.headers!.noLoading || showFullScreenLoading()
+
         // * 从Store里获取token
         const token = store.getState().global.token
         // 添加token到请求头
@@ -91,7 +96,7 @@ class TRequest {
         const { response } = err
         // * 即使请求失败，也需要关闭loadding
         NProgress.done()
-        tryHideFullScreenLoading()
+        // tryHideFullScreenLoading()
         // * 请求超时单独处理（超时信息在err.message中）
         if (err.message.includes('timeout')) message.error('请求超时！')
         // * 根据不同的http状态码，做不同的处理

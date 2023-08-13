@@ -52,7 +52,7 @@ const App: FC<IProps> = () => {
   )
 
   return (
-    <UploadImgsWrapper borderRadius="10px">
+    <UploadImgsWrapper >
       <Upload
         name="avatar"
         listType="picture-card"
