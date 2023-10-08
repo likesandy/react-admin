@@ -26,7 +26,7 @@ const LoginForm: FC<IProps> = memo(() => {
   const onFinish = async (loginForm: Login.ReqLoginForm) => {
     try {
       setLoading(true)
-      loginForm.password = md5(loginForm.password)
+      // loginForm.password = md5(loginForm.password)
       const { token } = await postLogin(loginForm)
       dispatch(setTokenAction(token))
       dispatch(setTabsListAction([]))

@@ -6,7 +6,7 @@ import { setTokenAction } from '@/store/modules/global'
 import { message } from 'antd'
 import type { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios'
 import axios, { AxiosError } from 'axios'
-import { PORT1, TIME_OUT } from './config'
+import { BASE_URL, TIME_OUT } from './config'
 import { AxiosCanceler } from './helper/axiosCancel'
 import { checkStatus } from './helper/checkStatus'
 import { RequestOptions } from './interface'
@@ -30,11 +30,11 @@ interface TRequestConfig<T = any> extends AxiosRequestConfig {
 const axiosCanceler = new AxiosCanceler()
 
 const config = {
-  baseURL: PORT1,
+  baseURL: BASE_URL,
   timeout: TIME_OUT,
   // 跨域请求时是否需要使用凭证
   // https://axios-http.com/zh/docs/req_config
-  withCredentials: true,
+  // withCredentials: true,
 }
 
 class TRequest {

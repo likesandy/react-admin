@@ -1,4 +1,6 @@
 import { MockMethod } from 'vite-plugin-mock'
+// ! sb插件，必须配置icon，搞了半天才发现问题
+
 export default [
   {
     url: '/api/login',
