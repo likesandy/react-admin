@@ -1,6 +1,6 @@
-import { HOME_URL } from '@/config/config'
 import { Login } from '@/api/interface'
 import { postLogin } from '@/api/modules/login'
+import { HOME_URL } from '@/config/config'
 import { useAppDispatch } from '@/store'
 import { setTokenAction } from '@/store/modules/global'
 import { setTabsListAction } from '@/store/modules/tabs'
@@ -10,7 +10,6 @@ import { Button, Form, Input, message } from 'antd'
 import { FC, ReactNode, memo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router-dom'
-import md5 from 'js-md5'
 
 interface IProps {
   children?: ReactNode

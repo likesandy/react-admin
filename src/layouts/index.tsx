@@ -17,14 +17,14 @@ const LayoutIndex: React.FC = () => {
   const { collapsed } = useSelector((state: RootState) => state.global.themeConfig)
   const dispatch = useDispatch()
 
-  const getAuthButtons = async () => {
-    const data = await getAuthorButtons()
-    dispatch(setAuthButtons(data))
-  }
+  // const getAuthButtons = async () => {
+  //   const data = await getAuthorButtons()
+  //   dispatch(setAuthButtons(data))
+  // }
 
-  useEffect(() => {
-    getAuthButtons()
-  }, [])
+  // useEffect(() => {
+  //   getAuthButtons()
+  // }, [])
 
   return (
     <LayoutsWrapper>

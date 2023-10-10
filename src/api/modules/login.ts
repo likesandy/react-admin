@@ -8,5 +8,5 @@ export const postLogin = (params: Login.ReqLoginForm): Promise<IToken> => {
 }
 
 export const getMenuList = (): Promise<any> => {
-  return tRequest.get('/menu/list')
+  return tRequest.get('/menu')
 }

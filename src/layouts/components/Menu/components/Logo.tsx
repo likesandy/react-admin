@@ -6,7 +6,7 @@ const Logo = (props: any) => {
   return (
     <LogoWrapper>
       <img src={logo} alt="logo" className="logo-img" />
-      {!isCollapse ? <h2 className="logo-text">ilun Admin</h2> : null}
+      {!isCollapse ? <h2 className="logo-text">Tao Admin</h2> : null}
     </LogoWrapper>
   )
 }
